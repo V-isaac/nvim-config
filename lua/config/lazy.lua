@@ -30,6 +30,17 @@ require("lazy").setup({
 		{ "catppuccin/nvim", name = "catppuccin",
 			priority = 1000
 		},
+		{
+			"iruzo/ripgrep.nvim",
+			verson = '*',
+			build = ':lua require("rg_setup").install_rg()'
+		},
 		{ import = "config.plugins" },
-  },
+		{
+			"nvim-treesitter/nvim-treesitter",
+			branch = 'master',
+			lazy = false,
+			build = ":TSUpdate"
+		},
+	}
 })

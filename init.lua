@@ -1,5 +1,6 @@
 print("initialised")
 require("visaac")
+require("visaac.remap")
 require("config.lazy")
 
 local g = vim.global
@@ -16,6 +17,9 @@ vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg = "grey" })
 
 opt.number = true
 opt.relativenumber = true
+vim.wo.wrap = false
+opt.ruler = true 
+opt.cursorline = true
 
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -29,8 +33,11 @@ require("catppuccin").setup({
         shade = "dark",
         percentage = 0.15, -- percentage of the shade to apply to the inactive window
     },
+
+		no_italic = true,
     styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { "italic" }, -- Change the style of comments
+        comments = {}, -- Change the style of comments
+				conditionals = {},
     },
     color_overrides = {},
     custom_highlights = {},

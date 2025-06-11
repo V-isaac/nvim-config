@@ -1,2 +1,2 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>od", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pd", vim.cmd.Ex)
