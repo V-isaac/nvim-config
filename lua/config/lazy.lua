@@ -24,6 +24,7 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
+		{ import = "config.plugins" },
 		{ 'nvim-telescope/telescope.nvim', tag = '0.1.8',
       dependencies = { 'nvim-lua/plenary.nvim' }
     }, 
@@ -31,11 +32,9 @@ require("lazy").setup({
 			priority = 1000
 		},
 		{
-			"iruzo/ripgrep.nvim",
-			verson = '*',
-			build = ':lua require("rg_setup").install_rg()'
+			"mbbill/undotree",
+			branch = 'master'
 		},
-		{ import = "config.plugins" },
 		{
 			"nvim-treesitter/nvim-treesitter",
 			branch = 'master',
