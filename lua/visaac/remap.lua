@@ -1,2 +1,3 @@
-vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pd", vim.cmd.Ex)
+local key = vim.keymap.set
+
+key("n", "<leader>pd", vim.cmd.Ex)

@@ -3,23 +3,44 @@ require("visaac")
 require("visaac.remap")
 require("config.lazy")
 
+
 local g = vim.global
 local opt = vim.opt
 
-opt.tabstop = 2
-opt.shiftwidth = 2
+vim.g.mapleader = " "
+
+-- formating
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.shiftwidth = 4
 opt.smartindent = true
-
 vim.cmd [[autocmd BufEnter * set fo-=c fo-=r fo-=o]]
+opt.wrap = false
 
+opt.clipboard = "unnamedplus" -- inside clip with yank/x/d
+
+
+--lsp
+  
+
+-- pretty things
 opt.colorcolumn = "80"
 vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg = "grey" })
-
 opt.number = true
 opt.relativenumber = true
-vim.wo.wrap = false
+
+opt.hlsearch = false -- no highlight during search
+opt.incsearch = true -- regex search
+
+opt.signcolumn = "yes"
+opt.scrolloff = 15
+
 opt.ruler = true 
 opt.cursorline = true
+opt.guicursor = ""
+
+opt.updatetime = 50 -- fast updating
+
 
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
