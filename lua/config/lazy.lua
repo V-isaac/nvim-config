@@ -25,21 +25,18 @@ require("lazy").setup({
   spec = {
 		{ import = "config.plugins" },
 		{ 'nvim-telescope/telescope.nvim', tag = '0.1.8',
-      dependencies = { 'nvim-lua/plenary.nvim' }
-    }, 
+		  dependencies = { 'nvim-lua/plenary.nvim' }
+		},
 		{ "catppuccin/nvim", name = "catppuccin",
 			priority = 1000
 		},
-		{
-			"mbbill/undotree",
+		{ "mbbill/undotree",
 			branch = 'master'
 		},
-		{
-			"nvim-treesitter/nvim-treesitter",
+		{ "nvim-treesitter/nvim-treesitter",
 			branch = 'master',
 			lazy = false,
 			build = ":TSUpdate"
 		},
-
 	}
 })

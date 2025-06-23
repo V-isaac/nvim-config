@@ -1,2 +1,1 @@
-print("sourced succesfully")
 
